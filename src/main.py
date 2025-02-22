@@ -13,14 +13,16 @@ class Main:
     pygame.display.set_caption('Chess')
     self.game = Game() 
 
+
   def mainloop(self):
     
     #set default name :
-    screen = self.screen
+    screen = self.screen 
     game = self.game
 
     while True :
-      game.show_bg(self.screen)  #self auto import
+      game.show_bg(screen)  
+      game.show_pieces(screen)
 
       for event in pygame.event.get():
         if event.type == pygame.QUIT:

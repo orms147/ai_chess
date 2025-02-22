@@ -1,3 +1,5 @@
+import os
+
 from const import *
 
 class Piece:
@@ -13,9 +15,11 @@ class Piece:
         self.set_texture()
         self.texture_rect = texture_rect
 
+    #add pic of piece 
     def set_texture(self, size=80):
-        self.texture = os.path.join(
-            f'assets/images/imgs-{size}px/{self.color}_{self.name}.png')
+        self.texture = os.path.join( 
+            f'assets/images/imgs-{size}px/{self.color}_{self.name}.png'
+        )
 
     def add_move(self, move):
         self.moves.append(move)
