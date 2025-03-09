@@ -1,0 +1,1 @@
+    board.move(dragger.piece, move)
